@@ -356,7 +356,8 @@ function createBall() {	// создаём блок div
 			thisBall.style.top = finishTop + "px";
 			thisBall.style.left = finishLeft + "px";
 			setTimeout(function () {	// если шарик находится в финишной точке, то:
-				if ((thisBall.offsetTop == finishTop) || (thisBall.offsetLeft == finishLeft)) {
+				if ((thisBall.offsetTop == finishTop) || (thisBall.offsetLeft == finishLeft)) {	// уменьшаем количество пойманых шаров (т.к. дальше они добавятся наместо)
+
 					// уменьшаем количество жизней на единицу
 					lifesSum--;
 					// если количество жизней не равно 0, то:
@@ -364,12 +365,11 @@ function createBall() {	// создаём блок div
 						removeLifesBlock();
 						// создаем новыйблок жизней с четом текущего количества жизней
 						createLifesBlock(lifesSum);
-						// вызываем функцию обработки движения мыши в шарике
+						// вызываем функцию обработки движениямыши а шарике
 						// т.к. эта функция провод ряд проверок и удаляет шарики
 						// тут есть pointSum++, поэтому тут надо удалить заранее один
-						// уменьшаем количество пойманых шаров (т.к. дальше они добавятся наместо)
 						pointSum--;
-						mouseBall(thisBall); // это опасное решение, его надо пересмотреть!
+						mouseBall(thisBall);
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
