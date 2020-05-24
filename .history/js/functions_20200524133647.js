@@ -357,7 +357,7 @@ function createBall() {	// создаём блок div
 			thisBall.style.left = finishLeft + "px";
 			setTimeout(function () {	// если шарик находится в финишной точке, то:
 				if ((thisBall.offsetTop == finishTop) || (thisBall.offsetLeft == finishLeft)) {	// уменьшаем количество пойманых шаров (т.к. дальше они добавятся наместо)
-					pointSum--;
+					// pointSum--;
 					// уменьшаем количество жизней на единицу
 					lifesSum--;
 					// если количество жизней не равно 0, то:
@@ -372,7 +372,6 @@ function createBall() {	// создаём блок div
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
-						pointSum++; // ВРЕМЕННО
 						endGame("lose");
 					}
 				}

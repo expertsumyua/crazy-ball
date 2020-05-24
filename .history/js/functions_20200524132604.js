@@ -71,11 +71,11 @@ function mouseBall(thisBall) {	// Если игра еще идет, то:
 			}
 		}
 		// увеличиваем счёт игры на еденицу
-		pointSum = pointSum + 1;
+		// pointSum++;
 		// увеличиваем счёт игры на рандомное число
 		//pointSum = pointSum + random(5);
 		// меняем текст счёта игры	
-		pointCounter.innerText = pointSum;
+		pointCounter.innerText = pointSum++;
 		// если счёт игры стал 15, то:
 		if (pointSum == points) {	// вызываем функцию конец игры
 			endGame("win");
@@ -372,7 +372,6 @@ function createBall() {	// создаём блок div
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
-						pointSum++; // ВРЕМЕННО
 						endGame("lose");
 					}
 				}

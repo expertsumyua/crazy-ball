@@ -372,7 +372,7 @@ function createBall() {	// создаём блок div
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
-						pointSum++; // ВРЕМЕННО
+						pointSum++;
 						endGame("lose");
 					}
 				}

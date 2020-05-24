@@ -20,9 +20,10 @@ function startGame() {	// удаляем стартовый блок
 }
 // endGame - функция конец игры
 function endGame(statusGame) {	// это означает, что игра остановлена
-	game = false;
+
 	// остановить тамер
 	clearInterval(timergame);
+	game = false;
 	// удаляем все шарики
 	removeAllBall();
 	//удаляем таймер
@@ -372,7 +373,6 @@ function createBall() {	// создаём блок div
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
-						pointSum++; // ВРЕМЕННО
 						endGame("lose");
 					}
 				}

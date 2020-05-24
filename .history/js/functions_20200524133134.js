@@ -35,11 +35,11 @@ function endGame(statusGame) {	// это означает, что игра ос�
 	timerBlock.innerText = durationGame;
 	// создаем блок статуса и выводисобщение о победе или проиграше
 	createStatusBlock(statusGame);
-	setTimeout(function () {	// удаляем статус блок
-		removeStatusBlock();
-		// создаём финишный блок
-		createFinishBlock();
-	}, 3000);
+	// setTimeout(function () {	// удаляем статус блок
+	removeStatusBlock();
+	// создаём финишный блок
+	createFinishBlock();
+	// }, 3000);
 	setTimeout(function () {	//удаляем финишный блок
 		removeFinishBlock();
 		// создаём стартовый блок
@@ -372,7 +372,6 @@ function createBall() {	// создаём блок div
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
-						pointSum++; // ВРЕМЕННО
 						endGame("lose");
 					}
 				}

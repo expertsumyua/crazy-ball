@@ -63,7 +63,7 @@ function mouseBall(thisBall) {	// Если игра еще идет, то:
 			thisBall.remove();
 			var ball = document.querySelector(".ball");
 			if (ball == null) {
-				var numberBall = random(5);
+				var numberBall = random(1);
 				while (numberBall) {
 					createBall();
 					numberBall--;
@@ -71,7 +71,7 @@ function mouseBall(thisBall) {	// Если игра еще идет, то:
 			}
 		}
 		// увеличиваем счёт игры на еденицу
-		pointSum = pointSum + 1;
+		pointSum++;
 		// увеличиваем счёт игры на рандомное число
 		//pointSum = pointSum + random(5);
 		// меняем текст счёта игры	
@@ -372,7 +372,6 @@ function createBall() {	// создаём блок div
 					}
 					// иначе
 					else {	// вызвать функцию окончания Игры
-						pointSum++; // ВРЕМЕННО
 						endGame("lose");
 					}
 				}
